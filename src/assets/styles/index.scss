@@ -1,0 +1,72 @@
+@import "~vuetify/src/styles/styles.sass";
+
+#app {
+    background-color: var(--v-background-base);
+}
+.v-application {
+    & &--wrap {
+        .v-main,
+        .v-footer {
+            max-width: 1024px;
+            margin: auto;
+            width: 100%;
+            background-color: var(--v-background-base);
+        }
+    }
+}
+
+.main-container {
+    background-color: var(--v-background-lighten1);
+
+    & > div {
+        height: 100%;
+    }
+
+    &__wrap {
+        height: 100%;
+    }
+}
+
+.competition-area {
+    font-size: 20px;
+}
+.match-date {
+    min-width: 150px;
+}
+.matches-table {
+    width: 100%;
+    height: 100%;
+}
+
+.v-toolbar {
+    &__content {
+        max-width: 1024px;
+        margin: auto;
+    }
+}
+
+.datepicker-input {
+    .v-input__slot {
+        margin-bottom: 0;
+    }
+}
+
+@media #{map-get($display-breakpoints, 'xs-only')} {
+    .filter {
+        flex-direction: column;
+
+        .datepicker-input {
+            margin: 0 0 8px;
+        }
+    }
+    .v-data-table {
+        .v-chip.v-size--default {
+            font-size: 10px;
+            height: 16px;
+        }
+
+        &__mobile-row__cell > div {
+            justify-content: flex-end;
+        }
+    }
+}
